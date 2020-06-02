@@ -1,0 +1,39 @@
+@import 'setup';
+@import 'typography';
+
+body{
+    background: rgb(48,65,93);
+    background: radial-gradient(circle, rgba(48,65,93,1) 10%, rgba(207,103,102,1) 100%);
+}
+header{
+    text-align: center;
+}
+section{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.question{
+    height:300px;
+}
+button{
+    margin-bottom: 50px;
+    background: lightblue;
+    color:#031424;
+    border-radius: 40%;
+    height:80px;
+    width:200px;
+    font-family: 'Architects Daughter', cursive;
+    border:none;
+    font-weight: bold;
+}
+button:hover, button:focus{
+    background-color: #30415d;
+    color: #cf6766;
+    cursor: grab;
+}
+input{
+    margin-right: 5%;
+    cursor: pointer;
+}

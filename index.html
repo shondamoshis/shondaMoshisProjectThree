@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <title>Dog Breed Selector Quiz</title>
+</head>
+<body>
+    <header>
+    <h1>What Dog Breed Is Best For You?</h1>
+    </header>
+    <section class="wrapper">
+    <form action="submit">
+        <div class="question">
+        <h2>What size of dog would you like?</h2>
+        <label for="quiz">Small</label>
+        <input type="radio" class="quiz" name="small">
+        <label for="quiz">Large</label>
+        <input type="radio" class ="quiz" name="large">
+        </div>
+        <div class="question">
+        <h2>Are you active?</h2>
+        <label for="quiz">Yes</label>
+        <input type="radio" class="quiz" name="yes">
+        <label for="quiz">No</label>
+        <input type="radio" class="quiz" name="no">
+        </div>
+        <div class="question">
+        <h2>Do you mind if your dog sheds?</h2>
+        <label for="quiz">No,give me all the fur!</label>
+        <input type="radio" class="quiz" name="true">
+        <label for="quiz">Yes, no fur here!</label>
+        <input type="radio" class="quiz" name="false">
+        </div>
+
+        <button type="submit">Give Me A Breed!</button>
+        <h3 class="result"></h3>
+        
+    </form>
+    </section>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>
