@@ -1,76 +1,93 @@
 // create array of dog breeds for small dog category
-const smallDog = [
+const dogs = [
     { 
         breed:'Toy Poodle',
         active:'no',
-        shed:false
+        shed:"false",
+        size:'small'
     },
     {
         breed:'Jack Russell Terrier',
         active:'yes',
-        shed:true
+        shed:"true",
+        size:'small'
     },
     {
         breed:'Yorkshire Terrier',
         active:'yes',
-        shed:false
+        shed:"false",
+        size:'small'
     },
     {
         breed:'Boston Terrier',
         active:'no',
-        shed:true
-    }
-
-]
-
-// create array of dog breeds for large dog cateory
-const largeDog = [
+        shed:"true",
+        size:'small'
+    },
     {
         breed:'Bull Mastiff',
         active:'no',
-        shed:true
+        shed:"true",
+        size:'large'
     },
     {
         breed:'Bouvier',
         active:'yes',
-        shed:false
+        shed:"false",
+        size:'large'
     },
     {
         breed:'Standard Poodle',
         active:'no',
-        shed:false
+        shed:"false",
+        size:'large'
     },
     {
         breed:'Husky',
         active:'yes',
-        shed:true
+        shed:"true",
+        size:'large'
     }
 ]
 
 $(document).ready(function(){
-    console.log('ready')
+    
 })
 // prevent default on form submission
 
 // create even listener on form submission
 $('form').on('submit',function(e){
     e.preventDefault();
+    $('.result').empty();
+    
+    
 
-})
 
-// create variable to store users input for size of dog
-let userSize;
-// create object with users input
-let userChoices = {};
-// create if statement to determine which loop will start based on dog size choice
 
-// create loop for small dog array
+// create variables to store users input for size of dog/activity level/shedding
+let userSize = $('input[name="size"]:checked').val()
 
-// create loop for large dog array
+let userActivity = $('input[name="active"]:checked').val()
 
-// create if statement to compare users input array to corresponding properties in the objects in the array of dog breeds
+let userShed = $('input[name="shed"]:checked').val()
 
-// create variable for result
+
+
+    const sizeArray = dogs.filter((size)=>{
+        return size.size === userSize
+    })
+    
+    const activeArray = sizeArray.filter((active)=>{
+        return active.active === userActivity
+    })
+    
+    const shedArray = activeArray.filter((shed)=>{
+        return shed.shed === userShed
+    })
+    
+
+
 
 // display result on page
-
+$('.result').append(`<h2>${shedArray[0].breed}</h2>`);
+})

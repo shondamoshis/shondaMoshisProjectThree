@@ -241,18 +241,19 @@ html {
   margin: 0 auto;
 }
 
-header, section, h3 {
-  font-family: 'Architects Daughter', cursive;
+section, h2, h3 {
+  font-family: 'Roboto', sans-serif;
   color: white;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 65px;
   color: white;
+  font-family: 'Architects Daughter', cursive;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 h3 {
@@ -293,10 +294,9 @@ button {
   margin-bottom: 50px;
   background: lightblue;
   color: #031424;
-  border-radius: 40%;
   height: 80px;
   width: 200px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Roboto', sans-serif;
   border: none;
   font-weight: bold;
 }
@@ -311,4 +311,9 @@ button:hover, button:focus {
 input {
   margin-right: 5%;
   cursor: pointer;
+}
+
+.fas {
+  color: white;
+  font-size: 50px;
 }

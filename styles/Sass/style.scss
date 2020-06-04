@@ -21,10 +21,9 @@ button{
     margin-bottom: 50px;
     background: lightblue;
     color:#031424;
-    border-radius: 40%;
     height:80px;
     width:200px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Roboto', sans-serif;
     border:none;
     font-weight: bold;
 }
@@ -36,4 +35,8 @@ button:hover, button:focus{
 input{
     margin-right: 5%;
     cursor: pointer;
+}
+.fas{
+    color:white;
+    font-size: 50px;
 }
