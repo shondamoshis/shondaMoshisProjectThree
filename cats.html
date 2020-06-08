@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8074cb3113.js" crossorigin="anonymous"></script>
+    <title>Cat Selector Quiz</title>
+</head>
+<body>
+    <header class="catHeader">
+        <h1><i class="fas fa-paw"></i>Which Cat Breed is Best For You?</h1>
+    </header>
+    <section>
+        <form action="submit" id="catForm">
+            <h2>Would you like your cat to have long or short hair?</h2>
+            <label for="catquiz">Short</label>
+            <input type="radio" name="hair" value="short">
+            <label for="catquiz">long</label>
+            <input type="radio" name="hair" value="long">
+
+            <h2>Would you like a cuddly cat?</h2>
+            <label for="catquiz">Cuddles</label>
+            <input type="radio" name="cuddle" value="yes">
+            <label for="catquiz">No Cuddles</label>
+            <input type="radio" name="cuddle" value="no">
+
+            <h2>What size of cat would you like?</h2>
+            <label for="catquiz">Normal</label>
+            <input type="radio" name="catSize" value="normal">
+            <label for="catquiz">Bigger</label>
+            <input type="radio" name="catSize" value="bigger">
+
+            <button type="submit">Give Me A Breed!</button>
+            <h3 class="catResult"></h3>
+        </form>
+    </section>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>

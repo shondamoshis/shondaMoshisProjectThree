@@ -49,21 +49,68 @@ const dogs = [
         size:'large'
     }
 ]
+const cats = [
+    {
+        breed:'Persian',
+        hair:'long',
+        cuddles:'no',
+        catSize:'normal'
+    },
+    {
+        breed:'Siberian',
+        hair:'long',
+        cuddles:'yes',
+        catSize:'normal'
+    },
+    {
+        breed:'Maine Coon',
+        hair:'long',
+        cuddles:'no',
+        size:'bigger'
+    },
+    {
+        breed:'Ragdoll',
+        hair:'long',
+        cuddles:'yes',
+        size:'bigger'
+    },
+    {
+        breed:'Chausie',
+        hair:'short',
+        cuddles:'yes',
+        size:'bigger'
+    },
+    {
+        breed:'Egyptian Mau',
+        hair:'short',
+        cuddles:'no',
+        size:'bigger'
+    },
+    {
+        breed:'Siamese',
+        hair:'short',
+        cuddles:'yes',
+        size:'normal'
+    },
+    {
+        breed:'American Bobtail',
+        hair:'short',
+        cuddles:'no',
+        size:'normal'
+    }
+]
 
 $(document).ready(function(){
     
-})
+
 // prevent default on form submission
 
 // create even listener on form submission
-$('form').on('submit',function(e){
+$('#dogForm').on('submit',function(e){
     e.preventDefault();
     $('.result').empty();
     
     
-
-
-
 // create variables to store users input for size of dog/activity level/shedding
 let userSize = $('input[name="size"]:checked').val()
 
@@ -85,9 +132,40 @@ let userShed = $('input[name="shed"]:checked').val()
         return shed.shed === userShed
     })
     
-
-
-
 // display result on page
 $('.result').append(`<h2>${shedArray[0].breed}</h2>`);
+});
+
+$('#catForm').on('submit', function (e) {
+    e.preventDefault();
+    $('.catresult').empty();
+    
+
+
+    let userHair = $('input[name="hair"]:checked').val()
+
+    let userCuddle = $('input[name="cuddle"]:checked').val()
+
+    let userCatSize = $('input[name="catSize"]:checked').val()
+
+   
+
+    const hairArray = cats.filter((hair) => {
+        return hair.hair === userHair
+       
+    })
+
+    const cuddleArray = hairArray.filter((cuddle) => {
+        return cuddle.cuddles === userCuddle
+    })
+
+    const catSizeArray = cuddleArray.filter((catsize) => {
+        return catsize.size === userCatSize
+    })
+    console.log(hairArray, cuddleArray, catSizeArray)
+    // display result on page
+    $('.catResult').append(`<h2>${catSizeArray[0].breed}</h2>`);
+
+})
+
 })

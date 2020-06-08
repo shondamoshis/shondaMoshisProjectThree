@@ -241,7 +241,7 @@ html {
   margin: 0 auto;
 }
 
-section, h2, h3 {
+section, h2, h3, a {
   font-family: 'Roboto', sans-serif;
   color: white;
 }
@@ -250,6 +250,7 @@ h1 {
   font-size: 65px;
   color: white;
   font-family: 'Architects Daughter', cursive;
+  padding-top: 300px;
 }
 
 h2 {
@@ -258,6 +259,7 @@ h2 {
 
 h3 {
   font-size: 45px;
+  margin-bottom: 200px;
 }
 
 label {
@@ -269,8 +271,22 @@ body {
   background: radial-gradient(circle, #30415d 10%, #cf6766 100%);
 }
 
-header {
+.dogHeader {
   text-align: center;
+  background-image: url("../assets/nathaniel-bowman-DCOH4VDnEQU-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-position: center;
+}
+
+.catHeader {
+  text-align: center;
+  background-image: url("../assets/ramiz-dedakovic-bmGy-eqrl1k-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-position: center;
 }
 
 section {
@@ -282,8 +298,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .question {

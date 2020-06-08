@@ -5,14 +5,26 @@ body{
     background: rgb(48,65,93);
     background: radial-gradient(circle, rgba(48,65,93,1) 10%, rgba(207,103,102,1) 100%);
 }
-header{
+.dogHeader{
     text-align: center;
+    background-image: url("../assets/nathaniel-bowman-DCOH4VDnEQU-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: center;
+}
+.catHeader{
+    text-align: center;
+    background-image: url("../assets/ramiz-dedakovic-bmGy-eqrl1k-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: center;
 }
 section{
     text-align: center;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 .question{
     height:300px;

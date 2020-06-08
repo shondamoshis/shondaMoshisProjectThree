@@ -10,13 +10,13 @@
     <title>Dog Breed Selector Quiz</title>
 </head>
 <body>
-    <header>
+    <header class="dogHeader">
         
-        <h1><i class="fas fa-paw"></i> What Dog Breed Is Best For You?</h1>
-        <a href="">No thanks, I prefer cats</a>
+        <h1><i class="fas fa-paw"></i> Which Dog Breed Is Best For You?</h1>
+        <a href="cats.html">No thanks, I prefer cats</a>
     </header>
     <section class="wrapper">
-    <form action="submit">
+    <form action="submit" id="dogForm">
         <div class="question">
         <h2>What size of dog would you like?</h2>
         <label for="size">Small</label>
@@ -33,7 +33,7 @@
         </div>
         <div class="question">
         <h2>Do you mind if your dog sheds?</h2>
-        <label for="shed">No,give me all the fur!</label>
+        <label for="shed">No, give me all the fur!</label>
         <input type="radio" value="true" name="shed" id="radio">
         <label for="shed">Yes, no fur here!</label>
         <input type="radio" value="false" name="shed" id="radio">
