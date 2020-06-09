@@ -266,27 +266,54 @@ label {
   font-size: 25px;
 }
 
+@media (max-width: 700px) {
+  img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 615px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 485px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 345px) {
+  h1 {
+    padding-top: 220px;
+  }
+}
+
 body {
   background: #30415d;
   background: radial-gradient(circle, #30415d 10%, #cf6766 100%);
 }
 
 .dogHeader {
-  text-align: center;
   background-image: url("../assets/nathaniel-bowman-DCOH4VDnEQU-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;
   background-position: center;
+  text-align: center;
 }
 
 .catHeader {
-  text-align: center;
   background-image: url("../assets/ramiz-dedakovic-bmGy-eqrl1k-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 80vh;
   background-position: center;
+  text-align: center;
 }
 
 section {
@@ -330,4 +357,13 @@ input {
 .fas {
   color: white;
   font-size: 50px;
+}
+
+.resultPic {
+  height: 500px;
+}
+
+a:hover, a:focus {
+  color: #30415d;
+  cursor: pointer;
 }

@@ -1,25 +1,19 @@
 @import 'setup';
 @import 'typography';
+@import 'mixins';
+@import 'mediaQueries';
 
 body{
     background: rgb(48,65,93);
     background: radial-gradient(circle, rgba(48,65,93,1) 10%, rgba(207,103,102,1) 100%);
 }
 .dogHeader{
-    text-align: center;
     background-image: url("../assets/nathaniel-bowman-DCOH4VDnEQU-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80vh;
-    background-position: center;
+    @include headerRules;
 }
 .catHeader{
-    text-align: center;
     background-image: url("../assets/ramiz-dedakovic-bmGy-eqrl1k-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80vh;
-    background-position: center;
+    @include headerRules;
 }
 section{
     text-align: center;
@@ -51,4 +45,11 @@ input{
 .fas{
     color:white;
     font-size: 50px;
+}
+.resultPic{
+    height:500px;
+}
+a:hover, a:focus{
+    color: #30415d;
+    cursor: pointer;
 }

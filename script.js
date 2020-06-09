@@ -1,52 +1,59 @@
-// create array of dog breeds for small dog category
 const dogs = [
     { 
         breed:'Toy Poodle',
         active:'no',
         shed:"false",
-        size:'small'
+        size:'small',
+        image: src = "./assets/toyPoodle.jpg"
     },
     {
         breed:'Jack Russell Terrier',
         active:'yes',
         shed:"true",
-        size:'small'
+        size:'small',
+        image: src = "./assets/jackRussell.jpg"
     },
     {
         breed:'Yorkshire Terrier',
         active:'yes',
         shed:"false",
-        size:'small'
+        size:'small',
+        image: src = "./assets/yorkie.jpg"
     },
     {
         breed:'Boston Terrier',
         active:'no',
         shed:"true",
-        size:'small'
+        size:'small',
+        image: src = "./assets/boston.jpg"
     },
     {
-        breed:'Bull Mastiff',
+        breed:'Yellow Lab',
         active:'no',
         shed:"true",
-        size:'large'
+        size:'large',
+        image: src = "./assets/lab.jpg"
     },
     {
         breed:'Bouvier',
         active:'yes',
         shed:"false",
-        size:'large'
+        size:'large',
+        image: src = "./assets/bouvier.jpg"
     },
     {
         breed:'Standard Poodle',
         active:'no',
         shed:"false",
-        size:'large'
+        size:'large',
+        image: src = "./assets/poodle.jpg"
     },
     {
         breed:'Husky',
         active:'yes',
         shed:"true",
-        size:'large'
+        size:'large',
+        image: src = "./assets/husky.jpg"
     }
 ]
 const cats = [
@@ -54,70 +61,74 @@ const cats = [
         breed:'Persian',
         hair:'long',
         cuddles:'no',
-        catSize:'normal'
+        size:'normal',
+        image: src = "./assets/persian.jpg"
     },
     {
         breed:'Siberian',
         hair:'long',
         cuddles:'yes',
-        catSize:'normal'
+        size:'normal',
+        image: src = "./assets/siberian.jpg"
     },
     {
         breed:'Maine Coon',
         hair:'long',
         cuddles:'no',
-        size:'bigger'
+        size:'bigger',
+        image: src = "./assets/maineCoon.jpg"
     },
     {
         breed:'Ragdoll',
         hair:'long',
         cuddles:'yes',
-        size:'bigger'
+        size:'bigger',
+        image: src = "./assets/ragdoll.jpg"
     },
     {
-        breed:'Chausie',
+        breed:'Abyssinian',
         hair:'short',
         cuddles:'yes',
-        size:'bigger'
+        size:'bigger',
+        image: src = "./assets/abyssinian.jpg"
     },
     {
         breed:'Egyptian Mau',
         hair:'short',
         cuddles:'no',
-        size:'bigger'
+        size:'bigger',
+        image: src = "./assets/egyptianMau.jpg"
     },
     {
         breed:'Siamese',
         hair:'short',
         cuddles:'yes',
-        size:'normal'
+        size:'normal',
+        image: src = "./assets/siamese.jpg"
     },
     {
         breed:'American Bobtail',
         hair:'short',
         cuddles:'no',
-        size:'normal'
+        size:'normal',
+        image: src = "./assets/bobtail.jpg"
     }
 ]
 
 $(document).ready(function(){
-    
 
-// prevent default on form submission
-
-// create even listener on form submission
 $('#dogForm').on('submit',function(e){
     e.preventDefault();
     $('.result').empty();
+    $('.resultPic').empty();
+    $('html, body').animate({scrollTop:$(document).height()},'slow');
+   
     
-    
-// create variables to store users input for size of dog/activity level/shedding
-let userSize = $('input[name="size"]:checked').val()
+    let userSize = $('input[name="size"]:checked').val()
 
-let userActivity = $('input[name="active"]:checked').val()
+    let userActivity = $('input[name="active"]:checked').val()
 
-let userShed = $('input[name="shed"]:checked').val()
-
+    let userShed = $('input[name="shed"]:checked').val()
 
 
     const sizeArray = dogs.filter((size)=>{
@@ -132,16 +143,17 @@ let userShed = $('input[name="shed"]:checked').val()
         return shed.shed === userShed
     })
     
-// display result on page
+
 $('.result').append(`<h2>${shedArray[0].breed}</h2>`);
+    $('.resultPic').append(`<img src=${shedArray[0].image}/> `)
 });
 
 $('#catForm').on('submit', function (e) {
     e.preventDefault();
-    $('.catresult').empty();
+    $('.catResult').empty();
+    $('.resultPic').empty();
+    $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
     
-
-
     let userHair = $('input[name="hair"]:checked').val()
 
     let userCuddle = $('input[name="cuddle"]:checked').val()
@@ -162,10 +174,10 @@ $('#catForm').on('submit', function (e) {
     const catSizeArray = cuddleArray.filter((catsize) => {
         return catsize.size === userCatSize
     })
-    console.log(hairArray, cuddleArray, catSizeArray)
-    // display result on page
-    $('.catResult').append(`<h2>${catSizeArray[0].breed}</h2>`);
 
-})
+$('.catResult').append(`<h2>${catSizeArray[0].breed}</h2>`);
 
-})
+$('.resultPic').append(`<img src=${catSizeArray[0].image}/> `)
+});
+
+});
