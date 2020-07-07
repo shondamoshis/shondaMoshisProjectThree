@@ -4,56 +4,56 @@ const dogs = [
         active:'no',
         shed:"false",
         size:'small',
-        image: src = "./assets/toyPoodle.jpg"
+        image:"./assets/toyPoodle.jpg"
     },
     {
         breed:'Jack Russell Terrier',
         active:'yes',
         shed:"true",
         size:'small',
-        image: src = "./assets/jackRussell.jpg"
+        image:"./assets/jackRussell.jpg"
     },
     {
         breed:'Yorkshire Terrier',
         active:'yes',
         shed:"false",
         size:'small',
-        image: src = "./assets/yorkie.jpg"
+        image:"./assets/yorkie.jpg"
     },
     {
         breed:'Boston Terrier',
         active:'no',
         shed:"true",
         size:'small',
-        image: src = "./assets/boston.jpg"
+        image:"./assets/boston.jpg"
     },
     {
         breed:'Yellow Lab',
         active:'no',
         shed:"true",
         size:'large',
-        image: src = "./assets/lab.jpg"
+        image:"./assets/lab.jpg"
     },
     {
         breed:'Bouvier',
         active:'yes',
         shed:"false",
         size:'large',
-        image: src = "./assets/bouvier.jpg"
+        image:"./assets/bouvier.jpg"
     },
     {
         breed:'Standard Poodle',
         active:'no',
         shed:"false",
         size:'large',
-        image: src = "./assets/poodle.jpg"
+        image:"./assets/poodle.jpg"
     },
     {
         breed:'Husky',
         active:'yes',
         shed:"true",
         size:'large',
-        image: src = "./assets/husky.jpg"
+        image:"./assets/husky.jpg"
     }
 ]
 const cats = [
@@ -62,56 +62,56 @@ const cats = [
         hair:'long',
         cuddles:'no',
         size:'normal',
-        image: src = "./assets/persian.jpg"
+        image:"./assets/persian.jpg"
     },
     {
         breed:'Siberian',
         hair:'long',
         cuddles:'yes',
         size:'normal',
-        image: src = "./assets/siberian.jpg"
+        image:"./assets/siberian.jpg"
     },
     {
         breed:'Maine Coon',
         hair:'long',
         cuddles:'no',
         size:'bigger',
-        image: src = "./assets/maineCoon.jpg"
+        image:"./assets/maineCoon.jpg"
     },
     {
         breed:'Ragdoll',
         hair:'long',
         cuddles:'yes',
         size:'bigger',
-        image: src = "./assets/ragdoll.jpg"
+        image:"./assets/ragdoll.JPG"
     },
     {
         breed:'Abyssinian',
         hair:'short',
         cuddles:'yes',
         size:'bigger',
-        image: src = "./assets/abyssinian.jpg"
+        image:"./assets/abyssinian.jpg"
     },
     {
         breed:'Egyptian Mau',
         hair:'short',
         cuddles:'no',
         size:'bigger',
-        image: src = "./assets/egyptianMau.jpg"
+        image:`./assets/egyptianMau.jpg`
     },
     {
         breed:'Siamese',
         hair:'short',
         cuddles:'yes',
         size:'normal',
-        image: src = "./assets/siamese.jpg"
+        image:"./assets/siamese.jpg"
     },
     {
         breed:'American Bobtail',
         hair:'short',
         cuddles:'no',
         size:'normal',
-        image: src = "./assets/bobtail.jpg"
+        image:"./assets/bobtail.jpg"
     }
 ]
 
@@ -145,7 +145,7 @@ $('#dogForm').on('submit',function(e){
     
 
 $('.result').append(`<h2>${shedArray[0].breed}</h2>`);
-    $('.resultPic').append(`<img src=${shedArray[0].image}/> `)
+    $('.resultPic').append(`<img src=${shedArray[0].image}> `)
 });
 
 $('#catForm').on('submit', function (e) {
@@ -177,7 +177,7 @@ $('#catForm').on('submit', function (e) {
 
 $('.catResult').append(`<h2>${catSizeArray[0].breed}</h2>`);
 
-$('.resultPic').append(`<img src=${catSizeArray[0].image}/> `)
+$('.resultPic').append(`<img src=${catSizeArray[0].image}> `)
 });
 
 });
