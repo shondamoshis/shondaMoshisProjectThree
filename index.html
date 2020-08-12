@@ -10,33 +10,40 @@
     <title>Dog Breed Selector Quiz</title>
 </head>
 <body>
+    <div class="modal">
+        <h1 class="shake-top">Welcome!</h1>
+        <h3>Furry friends are great company! Let's find one for you!</h3>
+        <p>Please select whether you would like a dog or a cat</p>
+        <button class="dogButton">Dog</button>
+        <a href="cats.html"><button>Cat</button></a>
+    </div>
     <header class="dogHeader">
         
         <h1><i class="fas fa-paw"></i> Which Dog Breed Is Best For You?</h1>
-        <a href="cats.html">No thanks, I prefer cats</a>
+        <a href="#dogForm"><i class="fas fa-arrow-down heartbeat"></i></a>
     </header>
     <section class="wrapper">
         <form action="submit" id="dogForm">
             <div class="question">
                 <h2>What size of dog would you like?</h2>
                 <label for="size">Small</label>
-                <input type="radio" value="small" name="size" id="radio">
+                <input type="radio" value="small" name="size" id="radio" autocomplete="off" required>
                 <label for="size">Large</label>
-                <input type="radio" value="large" name="size" id="radio">
+                <input type="radio" value="large" name="size" id="radio" autocomplete="off" required>
             </div>
             <div class="question">
                 <h2>Are you active?</h2>
                 <label for="active">Yes</label>
-                <input type="radio" value="yes" name="active" id="radio">
+                <input type="radio" value="yes" name="active" id="radio" autocomplete="off" required>
                 <label for="active">No</label>
-                <input type="radio" value="no" name="active" id="radio">
+                <input type="radio" value="no" name="active" id="radio" autocomplete="off" required>
             </div>
             <div class="question">
                 <h2>Do you mind if your dog sheds?</h2>
                 <label for="shed">No</label>
-                <input type="radio" value="true" name="shed" id="radio">
+                <input type="radio" value="true" name="shed" id="radio" autocomplete="off" required>
                 <label for="shed">Yes</label>
-                <input type="radio" value="false" name="shed" id="radio">
+                <input type="radio" value="false" name="shed" id="radio" autocomplete="off" required>
             </div>
             <button type="submit">Give Me A Breed!</button>
             <h3 class="result"></h3>

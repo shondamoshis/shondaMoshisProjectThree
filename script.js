@@ -117,11 +117,16 @@ const cats = [
 
 $(document).ready(function(){
 
+$('.dogButton').click(function(){
+    $('.modal').addClass('close');
+})
+
 $('#dogForm').on('submit',function(e){
     e.preventDefault();
     $('.result').empty();
     $('.resultPic').empty();
     $('html, body').animate({scrollTop:$(document).height()},'slow');
+   
    
     
     let userSize = $('input[name="size"]:checked').val()
@@ -145,8 +150,14 @@ $('#dogForm').on('submit',function(e){
     
 
 $('.result').append(`<h2>${shedArray[0].breed}</h2>`);
-    $('.resultPic').append(`<img src=${shedArray[0].image}> `)
+    $('.resultPic').append(`<img src=${shedArray[0].image}><button id="tryAgain">Try Again!</button>`)
 });
+    document.body.addEventListener('click', function (event) {
+        if (event.srcElement.id == 'tryAgain') {
+            location.reload();
+            window.scrollTo(0,0);
+        };
+    });
 
 $('#catForm').on('submit', function (e) {
     e.preventDefault();
@@ -177,7 +188,13 @@ $('#catForm').on('submit', function (e) {
 
 $('.catResult').append(`<h2>${catSizeArray[0].breed}</h2>`);
 
-$('.resultPic').append(`<img src=${catSizeArray[0].image}> `)
+    $('.resultPic').append(`<img src=${catSizeArray[0].image}> <button id="tryAgain">Try Again!</button> <button id="backAgain">Home</button>`)
 });
+    document.body.addEventListener('click', function (event) {
+        if (event.srcElement.id == 'backAgain') {
+            location.href="index.html"
+        };
+    });
+
 
 });

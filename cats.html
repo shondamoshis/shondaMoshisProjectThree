@@ -12,30 +12,30 @@
 <body>
     <header class="catHeader">
         <h1><i class="fas fa-paw"></i> Which Cat Breed is Best For You?</h1>
-        <a href="index.html">Take me back to the dogs!</a>
+        <a href="#catForm"><i class="fas fa-arrow-down heartbeat"></i></a>
     </header>
     <section>
         <form action="submit" id="catForm">
             <div class="question">
                 <h2>Would you like your cat to have long or short hair?</h2>
                 <label for="catquiz">Short</label>
-                <input type="radio" name="hair" value="short">
+                <input type="radio" name="hair" value="short" autocomplete="off" required>
                 <label for="catquiz">long</label>
-                <input type="radio" name="hair" value="long">
+                <input type="radio" name="hair" value="long" autocomplete="off" required>
             </div>
             <div class="question">
                 <h2>Would you like a cuddly cat?</h2>
                 <label for="catquiz">Cuddles</label>
-                <input type="radio" name="cuddle" value="yes">
+                <input type="radio" name="cuddle" value="yes" autocomplete="off" required>
                 <label for="catquiz">No Cuddles</label>
-                <input type="radio" name="cuddle" value="no">
+                <input type="radio" name="cuddle" value="no" autocomplete="off" required>
             </div>
             <div class="question">
                 <h2>What size of cat would you like?</h2>
                 <label for="catquiz">Normal</label>
-                <input type="radio" name="catSize" value="normal">
+                <input type="radio" name="catSize" value="normal" autocomplete="off" required>
                 <label for="catquiz">Bigger</label>
-                <input type="radio" name="catSize" value="bigger">
+                <input type="radio" name="catSize" value="bigger" autocomplete="off" required>
             </div>
             <button type="submit">Give Me A Breed!</button>
             <h3 class="catResult"></h3>
