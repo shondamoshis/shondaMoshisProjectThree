@@ -3,21 +3,24 @@
         width:90%;
     }
 }
-@media(max-width:615px){
-    h1{
-        font-size: 50px;
-    }
+@media(max-width:425px){
+.modal h1{
+    font-size:80px;
 }
-@media(max-width:485px){
-    h2{
-        font-size: 30px;
-    }
-    h3{
-        font-size: 35px;
-    }
+.modal h3{
+    font-size: 30px;
+    margin:5px 10px;
 }
-@media(max-width:345px){
+.modal p{
+    font-size: 20px;
+    margin:5px 10px;
+}
+}
+@media(max-width:365px){
+    .modal h1{
+        font-size: 60px;
+    }
     h1{
-        padding-top: 220px;
+        padding-top: 250px;
     }
 }

@@ -298,24 +298,26 @@ button {
   }
 }
 
-@media (max-width: 615px) {
-  h1 {
-    font-size: 50px;
+@media (max-width: 425px) {
+  .modal h1 {
+    font-size: 80px;
   }
-}
-
-@media (max-width: 485px) {
-  h2 {
+  .modal h3 {
     font-size: 30px;
+    margin: 5px 10px;
   }
-  h3 {
-    font-size: 35px;
+  .modal p {
+    font-size: 20px;
+    margin: 5px 10px;
   }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 365px) {
+  .modal h1 {
+    font-size: 60px;
+  }
   h1 {
-    padding-top: 220px;
+    padding-top: 250px;
   }
 }
 
@@ -399,6 +401,10 @@ button {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #4C2A85;
   background: radial-gradient(circle, #4C2A85 5%, #7d83ff 100%);
@@ -438,13 +444,17 @@ section {
 }
 
 button {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   background: #fdca40;
-  height: 80px;
+  height: 65px;
   width: 200px;
   border: none;
   font-weight: bold;
   border-radius: 15px;
+}
+
+#dogForm button, #catForm button {
+  height: 70px;
 }
 
 button:hover, button:focus {

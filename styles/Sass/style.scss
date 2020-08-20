@@ -4,6 +4,10 @@
 @import 'mediaQueries';
 @import 'modal';
 
+html{
+        scroll-behavior: smooth;
+}
+
 body{
     background: #4C2A85;
     background: radial-gradient(circle,#4C2A85 5%, #7d83ff 100%);
@@ -25,13 +29,16 @@ section{
     height:300px;
 }
 button{
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     background: #fdca40;
-    height:80px;
+    height:65px;
     width:200px;
     border:none;
     font-weight: bold;
     border-radius: 15px;
+}
+#dogForm button, #catForm button{
+        height:70px;
 }
 button:hover, button:focus{
     background-color: #Ea9010;
